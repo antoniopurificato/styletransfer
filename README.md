@@ -1,25 +1,25 @@
 # styletransfer
  
-This project was developed for the Vision And Perception exam, academic year 2021/2022, University La Sapienza of Rome.
+This project was developed for the **Vision And Perception** exam, academic year 2021/2022, University La Sapienza of Rome.
  
 ## Getting Started
  
-The aim of this project is to perform Style Transfer with 2 different approaches. The first one is based on Neural Style Transfer while the second one is based on Generative Adversarial Networks (GANs). For this task the idea is to modify faces images and panoramas with Van Gogh pictures.
+The aim of this project is to perform Style Transfer with 2 different approaches. <br>The first one is based on Neural Style Transfer while the second one is based on Generative Adversarial Networks (GANs). <br>For this task the idea is to modify faces images and panoramas with Van Gogh pictures.
  
 ### GAN Style Transfer
-There are 2 datasets for this task. The first one is a web scraped set of human faces of different ages,races and creeds downloaded from [Kaggle](https://www.kaggle.com/datasets/ashwingupta3012/human-faces). The second one is a set of Van Gogh Paintings collected from the [Berkeley](https://people.eecs.berkeley.edu/%7Etaesung_park/CycleGAN/datasets/) university. For this task is used CycleGAN. We adopt the architecture for our generative networks  who have shown impressive results. It is possible to see that there are 2 generators and 2 discriminators because we have 2 different domains and it is not possible in this case to use one single couple generator-discriminator. The incredible thing is that the same network was used also for Panoramas' Style Transfer with good results. Also in  this case the set of panoramas was downloaded from [Berkeley](https://people.eecs.berkeley.edu/%7Etaesung_park/CycleGAN/datasets/).
+There are 2 datasets for this task. The first one is a web scraped set of human faces of different ages,races and creeds downloaded from [Kaggle](https://www.kaggle.com/datasets/ashwingupta3012/human-faces). The second one is a set of Van Gogh Paintings collected from the [Berkeley](https://people.eecs.berkeley.edu/%7Etaesung_park/CycleGAN/datasets/) university. <br> For this task is used CycleGAN. We adopt the architecture for our generative networks  who have shown impressive results. It is possible to see that there are 2 generators and 2 discriminators because we have 2 different domains and it is not possible in this case to use one single couple generator-discriminator. <br> The incredible thing is that the same network was used also for Panoramas' Style Transfer with good results. Also in  this case the set of panoramas was downloaded from [Berkeley](https://people.eecs.berkeley.edu/%7Etaesung_park/CycleGAN/datasets/).
  
 ### Neural Style Transfer
 This approach was inspired by the works [2] and [3]. The model was trained on the human faces dataset, used also on the other task. Only one style image was used. To learn the content of the image to transform the algorithm minimizes the difference of features extracted at various depths of a pretrained VGG16 model, between said image and the produced one. To learn the style of the reference image instead, the model minimizes the norm of the difference between Gram matrices created from features extracted again from layers at various depths of the same VGG16 model. Since the model had trouble learning to color correctly the produced images a second model was developed that worked with gray images. Color is later added from the original by converting the images from RGB to the LAB color space.
  
 ## Installing 
  
-In this repository there are 5 Colab Notebooks. All the code can be runned using every browser without downloading anything.  The main notebook is MainNotebook. In this notebook is possible to find a setup cell. This cell must be runned only the first time and then must be commented. Using this cell is possible to download all the datasets that are required. In this way is not necessary to download the datasets by hand but all is done automatically. With this setup also some pretrained models are downloaded and in this way is possible to use them only for testing. After this is possible to run all the Notebook without problems. Is also possible to use the other 4 Notebooks that are for training simply running them on Google Colab.
+In this repository there are 5 Colab Notebooks. All the code can be runned using every browser without downloading anything.  The main notebook is *MainNotebook*. In this notebook is possible to find a setup cell. This cell must be runned only the first time and then must be commented. Using this cell is possible to download all the datasets that are required. In this way is not necessary to download the datasets by hand but all is done automatically. With this setup also some pretrained models are downloaded and in this way is possible to use them only for testing. After this is possible to run all the Notebook without problems. Is also possible to use the other 4 Notebooks that are for training simply running them on Google Colab.
  
 ## Results
  
 ### GAN Style Transfer
-Is possible to see the results in two ways. In the first one we run the TrainingNotebookFaces or TrainingNotebookPanoramas (depending on the task) and we wait to train our network, if for instance we want to change something. But we can also open MainNotebook and use the pretrained models provided by us. Is possible to see how the loss decreases over time and we can see the modified pictures both for the panoramas and for the human faces.
+Is possible to see the results in two ways. In the first one we run the TrainingNotebookFaces or TrainingNotebookPanoramas (depending on the task) and we wait to train our network, if for instance we want to change something. But we can also open *MainNotebook* and use the pretrained models provided by us. Is possible to see how the loss decreases over time and we can see the modified pictures both for the panoramas and for the human faces.
 <p align="center">
  <img src="/src/faces.png" width="500" title="Network result on faces" >
 <p\>
@@ -28,7 +28,7 @@ Is possible to see the results in two ways. In the first one we run the Training
 <p\>
  
 ### Neural Style Transfer
-The model can be trained as shown in TrainingNotebookNeural and TrainingNotebookNeuralGray. Pretrained models are also  available and MainNotebook shows how to use them. The advantage of the approach from [3] as opposed to [2] is that the model, during inference, can be called as any other model and it does not need to be trained every time a new image is produced.
+The model can be trained as shown in TrainingNotebookNeural and TrainingNotebookNeuralGray. Pretrained models are also  available and *MainNotebook* shows how to use them. The advantage of the approach from [3] as opposed to [2] is that the model, during inference, can be called as any other model and it does not need to be trained every time a new image is produced.
 <p align="center">
  <img src="/src/original.png" width="500" title="Original images" >
 <p\>
