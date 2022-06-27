@@ -21,49 +21,47 @@ In this repository there are 5 Colab Notebooks. All the code can be runned using
 ### GAN Style Transfer
 Is possible to see the results in two ways. In the first one we run the TrainingNotebookFaces or TrainingNotebookPanoramas (depending on the task) and we wait to train our network, if for instance we want to change something. But we can also open MainNotebook and use the pretrained models provided by us. Is possible to see how the loss decreases over time and we can see the modified pictures both for the panoramas and for the human faces.
 <p align="center">
- <img src="/src/faces.png" width="300" title="Network result on faces" >
+ <img src="/src/faces.png" width="500" title="Network result on faces" >
 <p\>
 	<p align="center">
- <img src="/src/panoramas.png" width="300" title="Network result on panoramas" >
+ <img src="/src/panoramas.png" width="500" title="Network result on panoramas" >
 <p\>
  
 ### Neural Style Transfer
 The model can be trained as shown in TrainingNotebookNeural and TrainingNotebookNeuralGray. Pretrained models are also  available and MainNotebook shows how to use them. The advantage of the approach from [3] as opposed to [2] is that the model, during inference, can be called as any other model and it does not need to be trained every time a new image is produced.
 <p align="center">
- <img src="/src/original.png" width="300" title="Original images" >
+ <img src="/src/original.png" width="500" title="Original images" >
 <p\>
 <p align="center">
- <img src="/src/color.png" width="300" title="Network learning colors." >
+ <img src="/src/color.png" width="500" title="Network learning colors." >
 <p\>
 <p align="center">
- <img src="/src/gray.png" width="300" title="Network working in grayscale with colors added after." >
+ <img src="/src/gray.png" width="500" title="Network working in grayscale with colors added after." >
 <p\>
 
 
 ## Authors
-- *Antonio Purificato* - Style Transfer using Generative Adversarial Networks -
-   [Antonio Purificato](https://github.com/antoniopurificato)
+- *[Antonio Purificato](https://github.com/antoniopurificato)* - Style Transfer using Generative Adversarial Networks 
  
- - *Marco Montagna* - Neural Style Transfer -
-   [Marco Montagna](https://github.com/Coerulatus)
-  - *Leonardo Mongelli* - Neural Style Transfer and Style Transfer using Generative Adversarial Networks -
-   [Leonardo Mongelli](https://github.com/Leonardo9900)
+- *[Marco Montagna](https://github.com/Coerulatus)* - Neural Style Transfer
+
+- *[Leonardo Mongelli](https://github.com/Leonardo9900)* - Neural Style Transfer and Style Transfer using Generative Adversarial Networks
  
 ## References
  
 ### Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
-
+```
 @inproceedings{CycleGAN2017,
  title={Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks},
  author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
  booktitle={Computer Vision (ICCV), 2017 IEEE International Conference on},
  year={2017}
 }
-
+```
 
 
 ### A Neural Algorithm of Artistic Style
-
+```
 @misc{https://doi.org/10.48550/arxiv.1508.06576,
   doi = {10.48550/ARXIV.1508.06576},
  
@@ -79,10 +77,10 @@ The model can be trained as shown in TrainingNotebookNeural and TrainingNotebook
  
   copyright = {arXiv.org perpetual, non-exclusive license}
 }
-
+```
 
 ### Perceptual Losses for Real-Time Style Transfer and Super-Resolution
-
+```
 @misc{https://doi.org/10.48550/arxiv.1603.08155,
   doi = {10.48550/ARXIV.1603.08155},
  
@@ -98,3 +96,4 @@ The model can be trained as shown in TrainingNotebookNeural and TrainingNotebook
  
   copyright = {arXiv.org perpetual, non-exclusive license}
 }
+```
