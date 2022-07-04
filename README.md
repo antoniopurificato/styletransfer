@@ -14,7 +14,10 @@ This approach was inspired by the works [2] and [3]. The model was trained on th
  
 ## Installing 
  
-In this repository there are 5 Colab Notebooks. All the code can be runned using every browser without downloading anything.  The main notebook is *MainNotebook*. In this notebook is possible to find a setup cell. This cell must be runned only the first time and then must be commented. Using this cell is possible to download all the datasets that are required. In this way is not necessary to download the datasets by hand but all is done automatically. With this setup also some pretrained models are downloaded and in this way is possible to use them only for testing. After this is possible to run all the Notebook without problems. Is also possible to use the other 4 Notebooks that are for training simply running them on Google Colab.
+In this repository there are 5 Colab Notebooks. All the code can be runned using Google Drive on every browser.<br>
+You have simply to paste all the Notebooks in your Drive.<br>
+The main notebook is *MainNotebook*. In this notebook is possible to find a setup cell. This cell must be runned only the first time and then must be commented. Using this cell is possible to download all the datasets that are required. In this way is not necessary to download the datasets by hand but all is done automatically. With this setup also some pretrained models are downloaded and in this way is possible to use them only for testing and to see the results.<br>
+Is also possible to use the other 4 Notebooks for training but but is descouraged because the execution time is about 4 hours of GPU for every Notebook to achieve results close to our pretrained models.
  
 ## Results
  
